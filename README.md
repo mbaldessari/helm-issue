@@ -41,18 +41,18 @@ $ helm-3.14.0 template .
 # Source: demo/charts/subchart/charts/subsubchart/templates/subsubchart-test.yaml
 global: {}
 hash:
-  key1: 1
+  key1: 1 # Not removed in subsubchart
   key2: thisworks
   subhash:
-    key1: a
+    key1: a # Not removed in subsubchart
     key2: overrideworks
 ---
 # Source: demo/charts/subchart/templates/subchart-test.yaml
 global: {}
 hash:
-  key2: 333
+  key2: 333 # (Note: key1 is correctly removed above)
   subhash:
-    key2: test
+    key2: test # (Note: key1 is correctly removed above)
 subsubchart:
   global: {}
   hash:
