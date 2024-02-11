@@ -1,0 +1,7 @@
+hash:
+  key1: 1
+  key2: 2
+
+  subhash:
+    key1: a
+    key2: b

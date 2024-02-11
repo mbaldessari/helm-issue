@@ -1,0 +1,15 @@
+subchart:
+  hash:
+    key1: null # Expect this to be removed in subchart
+    key2: 333
+    subhash:
+      key1: null # Expect this to be removed in subchart
+      key2: test
+
+  subsubchart:
+    hash:
+      key1: null # Expect this to be removed in subsubchart
+      key2: thisworks
+      subhash:
+        key1: null # Expect this to be removed in subsubchart
+        key2: overrideworks
